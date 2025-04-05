@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const turma_controller_1 = require("../controllers/turma.controller");
+const router = (0, express_1.Router)();
+router.use(auth_middleware_1.authenticate);
+router.get('/', turma_controller_1.TurmaController.getAll);
+router.get('/:id', turma_controller_1.TurmaController.getById);
+router.get('/:id/horarios', turma_controller_1.TurmaController.getHorarios);
+router.post('/', (0, auth_middleware_1.authorize)(['coordenador']), turma_controller_1.TurmaController.create);
+router.put('/:id', (0, auth_middleware_1.authorize)(['coordenador']), turma_controller_1.TurmaController.update);
+router.delete('/:id', (0, auth_middleware_1.authorize)(['coordenador']), turma_controller_1.TurmaController.delete);
+exports.default = router;

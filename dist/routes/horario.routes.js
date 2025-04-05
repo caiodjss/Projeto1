@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const horario_controller_1 = require("../controllers/horario.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const router = (0, express_1.Router)();
+router.use(auth_middleware_1.authenticate);
+router.get('/', horario_controller_1.HorarioController.getAll);
+router.get('/:id', horario_controller_1.HorarioController.getById);
+router.get('/docente/:docenteId', horario_controller_1.HorarioController.getByDocente);
+router.get('/turma/:turmaId', horario_controller_1.HorarioController.getByTurma);
+router.post('/', (0, auth_middleware_1.authorize)(['coordenador']), horario_controller_1.HorarioController.create);
+router.put('/:id', (0, auth_middleware_1.authorize)(['coordenador']), horario_controller_1.HorarioController.update);
+router.delete('/:id', (0, auth_middleware_1.authorize)(['coordenador']), horario_controller_1.HorarioController.delete);
+exports.default = router;

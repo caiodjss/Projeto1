@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda do Professor</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <a href="index.html">
+        <img src="./assets/avatar.png" alt="Logo" /></a>
+      </div>
+
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+
+        <li>
+          <a
+            id = "cadastro-docente"
+            target="_blank"
+            >Cadastro de docentes</a
+          >
+        </li>
+
+        <li>
+          <a
+            id = "cadastro-coordenadores"
+            target="_blank"
+            >Cadastro de Coordenadores</a
+          >
+        </li>
+
+        
+        <li>
+          <a
+            id = "cadastro-turmas"
+            target="_blank"
+            >Cadastro de Turmas</a
+          >
+        </li>
+
+        <li>
+          <a
+            id = "horario-docentes"
+            target="_blank"
+            >Horários dos Docentes</a
+          >
+        </li>
+
+        <li>
+          <a 
+          id = "consulta-horario-aula"
+          target="_blank"
+          >Consultar horário de aulas por docente</a>
+        </li>
+
+        <li>
+          <a 
+          id = "consulta-turma"
+          target="_blank"
+          >Consultar horário da turma</a>
+        </li>
+        
+        <li>
+          <a href="relatorio.html" 
+          target="_blank"
+          >Relatório da turma</a>
+        </li>
+
+      </ul>
+      <div id="view-form">
+      </div>
+      <br>
+      <div class="mapa-conteudo">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5219766330633!2d-38.38971292402593!3d-12.938415987373954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71617406c5e77d3%3A0x4ec6a2c9c19397b1!2sSENAI%20CIMATEC!5e0!3m2!1spt-BR!2sbr!4v1743459079517!5m2!1spt-BR!2sbr" 
+        width="100%"
+          height="200"rameborder="10" style="border: 10px;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        ></iframe>
+      </div>
+      <p id="endereco">SENAI CIMATEC <br> Universidade Av. Orlando Gomes, 1845 </p>
+      <footer>
+        <p class="copyright">&copy; Feito com 💚 pela <a href="https://caiodjss.github.io/bratso/" target="_blank">Brátso</a></p>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
