@@ -55,5 +55,3 @@ Antes de iniciar, certifique-se de ter instalado em sua máquina:
 - [MySQL](https://www.mysql.com/downloads/)
 
 Além disso, é recomendável o uso de um gerenciador de pacotes, como o [npm](https://www.npmjs.com/), que já vem com o Node.js.
-
-# Projeto1
